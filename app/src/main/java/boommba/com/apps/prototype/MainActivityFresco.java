@@ -35,18 +35,18 @@ public class MainActivityFresco extends AppCompatActivity {
         Fresco.initialize(this);
         setContentView(R.layout.activity_main_fresco);
 
-        SimpleDraweeView  simpleDraweeView = (SimpleDraweeView) findViewById(R.id.sdv_image);
+        simpleDraweeView = (SimpleDraweeView) findViewById(R.id.sdv_image);
 
         //INSTANTIATE BLUR POST PROCESSOR
-        Postprocessor  postprocessor = new BlurPostprocessor(this, BLUR_PRECENTAGE);
+        postprocessor = new BlurPostprocessor(this, BLUR_PRECENTAGE);
 
         //INSTATNTING IMAGE REQUEST USING POST PROCESSOR AS PARAMETER
-        ImageRequest  imageRequest = ImageRequestBuilder.newBuilderWithSource(Uri.parse(IMAGE_URL))
+        imageRequest = ImageRequestBuilder.newBuilderWithSource(Uri.parse(IMAGE_URL))
                 .setPostprocessor(postprocessor)
                 .build();
 
         //INSTANTATE CONTROLLOR()
-        PipelineDraweeController  controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
+        controller = (PipelineDraweeController) Fresco.newDraweeControllerBuilder()
                 .setImageRequest(imageRequest)
                 .setOldController(simpleDraweeView.getController())
                 .build();
