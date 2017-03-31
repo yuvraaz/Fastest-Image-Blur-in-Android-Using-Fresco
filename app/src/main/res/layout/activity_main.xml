@@ -1,38 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<Button
+    android:id="@+id/btn_fresco"
     android:layout_width="match_parent"
+    android:text="Using Fresco"
+    android:layout_height="wrap_content" />
 
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-
-    tools:context="boommba.com.apps.prototype.MainActivity">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+    <Button
+        android:id="@+id/btn_picaso"
+        android:layout_width="match_parent"
+        android:text="Using Picaso"
+        android:layout_height="wrap_content" />
 
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Using Fresco:"
-                android:textSize="25dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
-
-                <com.facebook.drawee.view.SimpleDraweeView
-                    android:id="@+id/sdv_image"
-                    android:layout_width="match_parent"
-                    android:layout_height="200dp"
-                    android:src="@mipmap/ic_launcher" />
-
-            </LinearLayout>
-        </LinearLayout>
-
-</RelativeLayout>
+</LinearLayout>
